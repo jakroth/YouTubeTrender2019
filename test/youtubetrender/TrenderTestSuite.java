@@ -17,7 +17,12 @@ import org.junit.runners.Suite;
  * @author Joel
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({youtubetrender.YouTubeDataParserTest.class, youtubetrender.YouTubeVideoTest.class, youtubetrender.YouTubeWordItemTest.class, youtubetrender.YouTubeVideoIndexerTest.class})
+@Suite.SuiteClasses({
+        youtubetrender.YouTubeDataParserTest.class,
+        youtubetrender.YouTubeVideoTest.class,
+        youtubetrender.YouTubeWordItemTest.class,
+        youtubetrender.YouTubeVideoIndexerTest.class
+})
 public class TrenderTestSuite {
 
     @BeforeClass

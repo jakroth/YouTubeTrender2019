@@ -6,24 +6,23 @@
 package youtubetrender;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
+import javax.swing.*;
 
 /**
  *
  * @author lewi0146, expanded by Joel Pillar-Rogers
  */
-public class YouTubeTrenderFrame extends javax.swing.JFrame {
+public class YouTubeTrenderFrame extends JFrame {
 
     DefaultListModel<YouTubeVideo> model = new DefaultListModel<>();
     DefaultListModel<YouTubeWordItem> trendModel = new DefaultListModel<>();
     YouTubeDataParser ytParser;
     YouTubeVideoIndexer ytIndexer;
-    List<YouTubeVideo> list;
+    ArrayList<YouTubeVideo> list;
     Set<YouTubeVideo> vidSet;
     List<YouTubeWordItem> trendList;
     boolean modelOp = false;
@@ -45,54 +44,54 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroupSort = new javax.swing.ButtonGroup();
-        jFileChooser = new javax.swing.JFileChooser();
-        jTextFieldDataFile = new javax.swing.JTextField();
-        jButtonParse = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextFieldChannel = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextFieldDate = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextFieldTitle = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextAreaDescription = new javax.swing.JTextArea();
-        jLabel5 = new javax.swing.JLabel();
-        jTextFieldViewCount = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextFieldLikeCount = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextFieldCommentCount = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldLikeRatio = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextFieldDislikeCount = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jListVideo = new javax.swing.JList();
-        jPanel3 = new javax.swing.JPanel();
-        jRadioButtonChannel = new javax.swing.JRadioButton();
-        jRadioButtonDate = new javax.swing.JRadioButton();
-        jRadioButtonViews = new javax.swing.JRadioButton();
-        jRadioButtonDescription = new javax.swing.JRadioButton();
-        jRadioButtonTitle = new javax.swing.JRadioButton();
-        jRadioButtonLikes = new javax.swing.JRadioButton();
-        jRadioButtonComments = new javax.swing.JRadioButton();
-        jRadioButtonLikeRatio = new javax.swing.JRadioButton();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jListTrending = new javax.swing.JList();
-        jButtonIndex = new javax.swing.JButton();
-        jButtonBrowse = new javax.swing.JButton();
+        buttonGroupSort = new ButtonGroup();
+        jFileChooser = new JFileChooser();
+        jTextFieldDataFile = new JTextField();
+        jButtonParse = new JButton();
+        jPanel1 = new JPanel();
+        jLabel1 = new JLabel();
+        jTextFieldChannel = new JTextField();
+        jLabel2 = new JLabel();
+        jTextFieldDate = new JTextField();
+        jLabel3 = new JLabel();
+        jTextFieldTitle = new JTextField();
+        jLabel4 = new JLabel();
+        jScrollPane2 = new JScrollPane();
+        jTextAreaDescription = new JTextArea();
+        jLabel5 = new JLabel();
+        jTextFieldViewCount = new JTextField();
+        jLabel6 = new JLabel();
+        jTextFieldLikeCount = new JTextField();
+        jLabel7 = new JLabel();
+        jTextFieldCommentCount = new JTextField();
+        jLabel8 = new JLabel();
+        jTextFieldLikeRatio = new JTextField();
+        jLabel9 = new JLabel();
+        jTextFieldDislikeCount = new JTextField();
+        jPanel2 = new JPanel();
+        jScrollPane1 = new JScrollPane();
+        jListVideo = new JList();
+        jPanel3 = new JPanel();
+        jRadioButtonChannel = new JRadioButton();
+        jRadioButtonDate = new JRadioButton();
+        jRadioButtonViews = new JRadioButton();
+        jRadioButtonDescription = new JRadioButton();
+        jRadioButtonTitle = new JRadioButton();
+        jRadioButtonLikes = new JRadioButton();
+        jRadioButtonComments = new JRadioButton();
+        jRadioButtonLikeRatio = new JRadioButton();
+        jPanel4 = new JPanel();
+        jScrollPane3 = new JScrollPane();
+        jListTrending = new JList();
+        jButtonIndex = new JButton();
+        jButtonBrowse = new JButton();
 
         jFileChooser.setApproveButtonToolTipText("");
         jFileChooser.setCurrentDirectory(new File("."));
         jFileChooser.setDialogTitle("");
         jFileChooser.setFileFilter(new jsonFileFilter());
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         jTextFieldDataFile.setText("youtubedata_15_50.json");
         jTextFieldDataFile.setToolTipText("the name of the json file to parse");
@@ -106,7 +105,7 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Video Details"));
+        jPanel1.setBorder(BorderFactory.createTitledBorder("Video Details"));
 
         jLabel1.setText("Channel");
 
@@ -158,100 +157,100 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
         jTextFieldDislikeCount.setEditable(false);
         jTextFieldDislikeCount.setToolTipText("displays the dislike count of the selected video");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(57, 57, 57)
                         .addComponent(jTextFieldTitle))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel7))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextFieldDate, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextFieldDate, GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                                             .addComponent(jTextFieldViewCount)
                                             .addComponent(jTextFieldCommentCount))
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jTextFieldLikeRatio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jTextFieldLikeRatio, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(jLabel9)
                                                         .addGap(12, 12, 12))
-                                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jTextFieldDislikeCount, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jTextFieldLikeCount, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                    .addComponent(jLabel6, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jTextFieldDislikeCount, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextFieldLikeCount, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)))))
                                     .addComponent(jTextFieldChannel)))
                             .addComponent(jLabel4))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextFieldTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldTitle, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jTextFieldChannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldChannel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
-                                    .addComponent(jTextFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextFieldDate, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel5)
-                                    .addComponent(jTextFieldViewCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldCommentCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextFieldLikeCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTextFieldViewCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldCommentCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTextFieldLikeCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel6, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
-                            .addComponent(jTextFieldDislikeCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldDislikeCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(jTextFieldLikeRatio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldLikeRatio, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
                 .addGap(23, 23, 23)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Videos"));
+        jPanel2.setBorder(BorderFactory.createTitledBorder("Videos"));
 
         jListVideo.setToolTipText("displays all the videos in the json file that include the indexed word (if selected)");
         jListVideo.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -261,23 +260,23 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jListVideo);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        GroupLayout jPanel2Layout = new GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Sort Criteria"));
+        jPanel3.setBorder(BorderFactory.createTitledBorder("Sort Criteria"));
 
         buttonGroupSort.add(jRadioButtonChannel);
         jRadioButtonChannel.setMnemonic('c');
@@ -359,47 +358,47 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        GroupLayout jPanel3Layout = new GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonViews)
                     .addComponent(jRadioButtonTitle))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonDate)
                     .addComponent(jRadioButtonLikes))
                 .addGap(2, 2, 2)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonDescription)
                     .addComponent(jRadioButtonComments))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonLikeRatio)
                     .addComponent(jRadioButtonChannel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonDescription)
                     .addComponent(jRadioButtonDate)
                     .addComponent(jRadioButtonTitle)
                     .addComponent(jRadioButtonChannel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonViews)
                     .addComponent(jRadioButtonLikes)
                     .addComponent(jRadioButtonLikeRatio)
                     .addComponent(jRadioButtonComments))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Trending"));
+        jPanel4.setBorder(BorderFactory.createTitledBorder("Trending"));
         jPanel4.setToolTipText("[word,occurence,videos]");
 
         jListTrending.setToolTipText("displays the unique words from the title and description of all videos in the selected json file");
@@ -410,17 +409,17 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jListTrending);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+            jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, GroupLayout.PREFERRED_SIZE, 114, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jScrollPane3)
                 .addContainerGap())
@@ -444,48 +443,48 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextFieldDataFile)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonBrowse)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonParse, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonParse, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonIndex))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldDataFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldDataFile, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonBrowse)
                     .addComponent(jButtonIndex)
                     .addComponent(jButtonParse))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -510,7 +509,7 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
             // Get the ArrayList from the ytParser, and save as a List. 
             list = ytParser.getArray();
             // Populates the resticting set - only videos in this set will be displayed
-            vidSet = new HashSet();
+            vidSet = new HashSet<>();
             vidSet.addAll(list);
             // Catch any of the parsing exceptions
         } catch (YouTubeDataParserException ex) {
@@ -682,7 +681,7 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
 
     private void jButtonBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBrowseActionPerformed
         int returnVal = jFileChooser.showOpenDialog(this);
-        if (returnVal == jFileChooser.APPROVE_OPTION) {
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = jFileChooser.getSelectedFile();
             jTextFieldDataFile.setText(file.getName());
             clearGUI();
@@ -730,8 +729,8 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
         modelOp = false;
     }
 
-    /*
-    * Inner class to override the default file filter to only show JSON files
+    /**
+     * Inner class to override the default file filter to only show JSON files
      */
     class jsonFileFilter extends javax.swing.filechooser.FileFilter {
 
@@ -751,7 +750,7 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -760,16 +759,7 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
         try {
             // Set System L&F
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(YouTubeTrenderFrame.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(YouTubeTrenderFrame.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(YouTubeTrenderFrame.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(YouTubeTrenderFrame.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
@@ -788,46 +778,46 @@ public class YouTubeTrenderFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroupSort;
-    private javax.swing.JButton jButtonBrowse;
-    private javax.swing.JButton jButtonIndex;
-    private javax.swing.JButton jButtonParse;
-    private javax.swing.JFileChooser jFileChooser;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JList jListTrending;
-    private javax.swing.JList jListVideo;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButtonChannel;
-    private javax.swing.JRadioButton jRadioButtonComments;
-    private javax.swing.JRadioButton jRadioButtonDate;
-    private javax.swing.JRadioButton jRadioButtonDescription;
-    private javax.swing.JRadioButton jRadioButtonLikeRatio;
-    private javax.swing.JRadioButton jRadioButtonLikes;
-    private javax.swing.JRadioButton jRadioButtonTitle;
-    private javax.swing.JRadioButton jRadioButtonViews;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextAreaDescription;
-    private javax.swing.JTextField jTextFieldChannel;
-    private javax.swing.JTextField jTextFieldCommentCount;
-    private javax.swing.JTextField jTextFieldDataFile;
-    private javax.swing.JTextField jTextFieldDate;
-    private javax.swing.JTextField jTextFieldDislikeCount;
-    private javax.swing.JTextField jTextFieldLikeCount;
-    private javax.swing.JTextField jTextFieldLikeRatio;
-    private javax.swing.JTextField jTextFieldTitle;
-    private javax.swing.JTextField jTextFieldViewCount;
+    private ButtonGroup buttonGroupSort;
+    private JButton jButtonBrowse;
+    private JButton jButtonIndex;
+    private JButton jButtonParse;
+    private JFileChooser jFileChooser;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JLabel jLabel5;
+    private JLabel jLabel6;
+    private JLabel jLabel7;
+    private JLabel jLabel8;
+    private JLabel jLabel9;
+    private JList jListTrending;
+    private JList<YouTubeVideo> jListVideo;
+    private JPanel jPanel1;
+    private JPanel jPanel2;
+    private JPanel jPanel3;
+    private JPanel jPanel4;
+    private JRadioButton jRadioButtonChannel;
+    private JRadioButton jRadioButtonComments;
+    private JRadioButton jRadioButtonDate;
+    private JRadioButton jRadioButtonDescription;
+    private JRadioButton jRadioButtonLikeRatio;
+    private JRadioButton jRadioButtonLikes;
+    private JRadioButton jRadioButtonTitle;
+    private JRadioButton jRadioButtonViews;
+    private JScrollPane jScrollPane1;
+    private JScrollPane jScrollPane2;
+    private JScrollPane jScrollPane3;
+    private JTextArea jTextAreaDescription;
+    private JTextField jTextFieldChannel;
+    private JTextField jTextFieldCommentCount;
+    private JTextField jTextFieldDataFile;
+    private JTextField jTextFieldDate;
+    private JTextField jTextFieldDislikeCount;
+    private JTextField jTextFieldLikeCount;
+    private JTextField jTextFieldLikeRatio;
+    private JTextField jTextFieldTitle;
+    private JTextField jTextFieldViewCount;
     // End of variables declaration//GEN-END:variables
 }

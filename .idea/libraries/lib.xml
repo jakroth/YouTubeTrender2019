@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/customizer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/sound.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jmf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/mediaplayer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/beansbinding-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/javax.json-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/multiplayer.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

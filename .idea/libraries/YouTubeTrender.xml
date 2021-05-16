@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="YouTubeTrender">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/YouTubeTrender.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

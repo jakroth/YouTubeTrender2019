@@ -384,7 +384,7 @@ public class YouTubeDataParser {
             System.out.println("Favourites: " + ytVideoList.get(i).getFavouriteCount());
             System.out.println("Number of Comments: " + ytVideoList.get(i).getCommentCount());
             System.out.println("");
-        } catch (ArrayIndexOutOfBoundsException aioob) {
+        } catch (IndexOutOfBoundsException ioob) {
             System.out.println("There are no videos in this parser.");
         }
     }
@@ -536,7 +536,7 @@ public class YouTubeDataParser {
     /**
      * Returns the member ArrayList so it can be used by the GUI.
      */
-    public ArrayList getArray() {
+    public ArrayList<YouTubeVideo> getArray() {
         return ytVideoList;
     }
 
